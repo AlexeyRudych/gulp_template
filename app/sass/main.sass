@@ -1,0 +1,70 @@
+@import vars
+
+// red-bootstrap grid
+.container-fluid
+	padding-left: 30px
+	padding-right: 30px
+
+.filter
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #000
+	opacity: .4
+
+header
+	height: 100vh
+	background-image: url(../img/header-welcome.jpg)
+	background-size: cover
+	position: relative
+	top: 0
+	left: 0
+	span
+		color: rgba(255, 255, 255, 0.35)
+		font-family: $montsBold, sans-serif
+	.logo-block
+		width: 90px
+		height: 90px
+		background-color: #fff
+		cursor: pointer
+		transform-style: preserve-3d
+		transition: all .1s linear
+		border-radius: 5px
+		position: fixed
+		box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2)
+		a
+			width: 100%
+			height: 100%
+			color: $mainColor
+			font-family: $libreBold, serif
+			font-size: 5.2rem
+			text-shadow: 0 0 0 transparent
+			animation: logoAnimation 10s infinite
+			transform: translateZ(20px)
+			transition: all .4s linear
+			position: absolute
+			display: flex
+			align-items: center
+			justify-content: center
+		&:hover
+			// background: linear-gradient(270deg, $whiteColor, $grayColor, $whiteColor) 
+		&:hover a
+				text-shadow: 1px 1px 1px $blackColor
+				color: $mainActiveColor
+		&:hover .logo-block-span_1
+			opacity: 1
+			font-size: 5.2rem
+		&:hover .logo-block-span_0
+			opacity: 0
+			font-size: 0
+
+.logo-block-span_1
+	transition: all .4s linear
+	opacity: 0
+	font-size: 0
+
+.nav-container
+	display: flex
+	justify-content: flex-end
